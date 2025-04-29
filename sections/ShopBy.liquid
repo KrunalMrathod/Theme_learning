@@ -1,27 +1,153 @@
 {{ 'shopby.css' | asset_url | stylesheet_tag }}
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('.shopby_buttons button');
+{% comment %}
+  <script>
+    const productsObject = {
+      'Shop By Line': {
+        products: [
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/43859643e5751061f0399ee7cdc5f48a_54c64739-d002-42a0-bc46-0aa7adf4030a.png?v=1738674585',
+            name: 'PRO LINE | Brighten & Anti-Age',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/stand_3683p_bio_lip_factor_2oz_visualizer_72397a33-d5f6-4a8d-95a5-c3ad5280d14b.png?v=1738674600',
+            name: 'BIO LINE | Restore & Hydrate',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/smart_peels__phsolution_1.png?v=1738674782',
+            name: 'MYSTIQ LINE | ILuminate & Nourish',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/pro_retinal_plus_retinal_treatment.png?v=1737571306',
+            name: 'ICE LINE | Correct & Balance',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/6062_Solar_Shield_30_Classic_Tint_copy_eed978f7-d301-46d4-9754-05bcc1637148.png?v=1737571298',
+            name: 'SPF LINE | Protect & Hydrate',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/5001BODYBrighteningCleanser_NOCAPcopy2.png?v=1737571321',
+            name: 'BODY Line | Nourish & Brighten Body',
+          },
+        ],
+      },
+      'Shop By Line Skin Conditions': {
+        products: [
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/43859643e5751061f0399ee7cdc5f48a_2e06fc71-6dad-483d-831e-2c04a9e8c1e9.png?v=1738674817',
+            name: 'Normal / Combination',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/smart_peels_exo_retinoid_1.png?v=1738674831',
+            name: 'Acne / Oily',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/product-img-1.png?v=1738674864',
+            name: 'Pigmentation / Brightening',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/mystiq_iluminating_beauty_oil.png?v=1733847462',
+            name: 'Dry / Dehydrated',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/anti-aging.png?v=1736921402',
+            name: 'Anti-Aging / Firming',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/3120SolarShield30OilFreecopy.png?v=1737570281',
+            name: 'Sensitive / Rosacea',
+          },
+        ],
+      },
+      'Product Type': {
+        products: [
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/3121MYSTIQiLuminatingCleansercopy.png?v=1733848634',
+            name: 'Cleansers',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/c83758195335c87cf166c91b9a47b07d.png?v=1737488811',
+            name: 'Masques',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/3900PROAnti-AgingPadscopy.png?v=1733848221',
+            name: 'Exfoliators & Scrubs',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/3096PRORetinolCremecopy.png?v=1737570190',
+            name: 'Crèmes & Moisturizers',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/0c9cd501ee8120604c83930f61658625.png?v=1733848028',
+            name: 'Serums',
+          },
+          {
+            img: 'https://liraclinical.com/cdn/shop/collections/3120SolarShield30OilFreecopy_403b4cf0-755b-44e0-8a3e-012653d733e5.png?v=1733848818',
+            name: 'Sun Protection',
+          },
+        ],
+      },
+    };
 
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        buttons.forEach((btn) => btn.classList.remove('shopby_active_button'));
-        button.classList.add('shopby_active_button');
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.shopby_buttons button');
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          buttons.forEach((btn) => btn.classList.remove('shopby_active_button'));
+          button.classList.add('shopby_active_button');
+
+          displayProducts(button.textContent.trim());
+        });
       });
+
+      displayProducts('Shop By Line');
     });
-  });
-</script>
+
+    function displayProducts(name) {
+      const container = document.querySelector('.shopByProductsContainer');
+      container.innerHTML = '';
+
+      switch (true) {
+        case productsObject.hasOwnProperty(name):
+          const data = productsObject[name];
+          data.products.forEach((product) => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product_item');
+
+            const img = document.createElement('img');
+            img.src = product.img || product;
+            img.alt = product.name || product;
+
+            productDiv.appendChild(img);
+            if (product.name) {
+              const nameDiv = document.createElement('div');
+              nameDiv.classList.add('product_name');
+              nameDiv.textContent = product.name;
+              productDiv.appendChild(nameDiv);
+            }
+            container.appendChild(productDiv);
+          });
+
+          break;
+
+        default:
+          console.log('Category not found:', name);
+      }
+    }
+  </script>
+{% endcomment %}
 
 <section class="shopbybrand">
   <div class="shopbybrand_container">
     <h2>Shop By</h2>
     <div class="shopby_buttons">
-      <button class="shopby_active_button">Shop By Line</button>
-      <button>Shop By Line Skin Conditions</button>
-      <button>Product Type</button>
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.url }}"> {{ block.settings.button_text }} </a>
+      {% endfor %}
     </div>
   </div>
+  <div class="shopByProductsContainer"></div>
 </section>
 
 {% schema %}
@@ -29,6 +155,24 @@
   "name": "Shop By Brand",
   "class": "section",
   "settings": [],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "url"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Shop By Brand"

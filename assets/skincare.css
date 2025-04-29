@@ -1,0 +1,115 @@
+:root {
+    --secondary: #4f4c4d;
+    --font-helvetica: "Helvetica", sans-serif;
+    --white: #ffffff;
+}
+
+
+.section-skincare {
+    padding: 5%;
+}
+
+.skincare-content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.skin_container {
+    max-width: calc(50% - 10px);
+    width: 100%;
+    height: 550px;
+    cursor: pointer;
+    position: relative;
+}
+
+.skin_container img {
+    width: 100%;
+    height: 100%;
+}
+
+.skin_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #3a2f2f45;
+}
+
+.image_content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.image_content>h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: whitesmoke;
+}
+
+.image_content>a {
+    padding: 20px 50px;
+    background: var(--white);
+    color: var(--secondary);
+    font-family: var(--font-helvetica);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.4px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all ease-in-out 0.5s;
+    text-decoration: none;
+}
+
+.image_content>a:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+
+}
+
+@media screen and (max-width: 768px) {
+    .skincare-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .skin_container {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    .image_content {
+        bottom: unset;
+        top: 0;
+        flex-direction: column;
+        transform: translateY(160%);
+    }
+
+    .image_content>h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #f5f5f5;
+    }
+
+    .image_content>a {
+        padding: 4px 10px;
+        font-size: 11px;
+
+    }
+
+}
+
+/* let unique = [...new Set(myArray)]; */

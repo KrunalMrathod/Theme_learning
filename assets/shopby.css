@@ -11,10 +11,12 @@
 }
 
 .shopbybrand_container {
+    width: 80%;
+    margin: 30px auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .shopbybrand_container>h2 {
@@ -22,11 +24,17 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
-    letter-spacing: -0.02em;
+    letter-spacing: -.02em;
     text-align: center;
 }
 
-.shopbybrand_container .shopby_buttons>button {
+.shopby_buttons {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.shopby_buttons a {
     padding: 13px 19px;
     font-family: var(--font-helvetica);
     border: 1px solid #6D6E7299;
@@ -40,15 +48,11 @@
     display: inline-block;
     color: var(--secondary);
     white-space: nowrap;
-    transition: all ease .4s;
+    text-decoration: none;
 }
 
-.shopbybrand_container .shopby_buttons>button:hover {
+.active_product_button {
     background: var(--secondary);
     color: var(--white);
-}
 
-.shopby_buttons > .shopby_active_button {
-    background: var(--secondary) !important;
-    color: var(--white) !important;
 }
