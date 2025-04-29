@@ -1,0 +1,54 @@
+:root {
+    --dark-black: #231f20;
+    --border-red: red;
+    --font-helvetica: "Helvetica", sans-serif;
+    --secondary: #4f4c4d;
+    --white: #ffffff;
+}
+
+.shopbybrand {
+    /* border: 1px solid var(--border-red); */
+}
+
+.shopbybrand_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shopbybrand_container>h2 {
+    color: var(--dark-black);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.shopbybrand_container .shopby_buttons>button {
+    padding: 13px 19px;
+    font-family: var(--font-helvetica);
+    border: 1px solid #6D6E7299;
+    background: var(--white);
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.4px;
+    letter-spacing: .02em;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--secondary);
+    white-space: nowrap;
+    transition: all ease .4s;
+}
+
+.shopbybrand_container .shopby_buttons>button:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.shopby_buttons > .shopby_active_button {
+    background: var(--secondary) !important;
+    color: var(--white) !important;
+}

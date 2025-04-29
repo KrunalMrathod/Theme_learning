@@ -1,0 +1,38 @@
+{{ 'shopby.css' | asset_url | stylesheet_tag }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.shopby_buttons button');
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((btn) => btn.classList.remove('shopby_active_button'));
+        button.classList.add('shopby_active_button');
+      });
+    });
+  });
+</script>
+
+<section class="shopbybrand">
+  <div class="shopbybrand_container">
+    <h2>Shop By</h2>
+    <div class="shopby_buttons">
+      <button class="shopby_active_button">Shop By Line</button>
+      <button>Shop By Line Skin Conditions</button>
+      <button>Product Type</button>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop By Brand",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Shop By Brand"
+    }
+  ]
+}
+{% endschema %}
