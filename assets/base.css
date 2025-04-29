@@ -2574,6 +2574,8 @@ input[type='checkbox'] {
   color: black;
 }
 
+
+
 @media screen and (max-width: 1024px) {
 
   .header__icons>div {
@@ -2587,21 +2589,36 @@ input[type='checkbox'] {
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1590px) {
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
   .header_navigations_buttons_hover_buttons {
-    padding: 5px 15px;
-    font-size: 12px;
+    padding: 0px 8px;
+    font-size: 10px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1460px) {
+
+
+@media screen and (min-width: 768px) and (max-width: 1167px) {
   .list-menu>li>a>span {
-    font-size: 12px !important;
+    font-size: 11px !important;
     font-weight: 400 !important;
   }
 
 }
 
+@media screen and (min-width: 1440px) and (max-width: 1459px) {
+  .list-menu>li>a>span {
+    font-size: 14px !important;
+  }
+
+}
+
+
+@media screen and (min-width: 1440px) and (max-width: 1590px) {
+  .header_navigations_buttons_hover_buttons {
+    font-size: 12px;
+  }
+}
 
 .header__icon:not(.header__icon--summary),
 .header__icon span {
