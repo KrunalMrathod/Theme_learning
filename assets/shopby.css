@@ -6,9 +6,7 @@
     --white: #ffffff;
 }
 
-.shopbybrand {
-    /* border: 1px solid var(--border-red); */
-}
+
 
 .shopbybrand_container {
     width: 80%;
@@ -32,9 +30,10 @@
     display: flex;
     gap: 20px;
     flex-direction: row;
+
 }
 
-.shopby_buttons a {
+.shopby_buttons li {
     padding: 13px 19px;
     font-family: var(--font-helvetica);
     border: 1px solid #6D6E7299;
@@ -49,10 +48,58 @@
     color: var(--secondary);
     white-space: nowrap;
     text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    list-style: none;
+    text-decoration: none;
+}
+
+.shopby_buttons li a {
+    text-decoration: none;
+    color: var(--dark-black);
 }
 
 .active_product_button {
+    background: var(--secondary) !important;
+}
+
+.active_product_button>a {
+    color: var(--white) !important;
+}
+
+.shopby_buttons li:hover {
     background: var(--secondary);
     color: var(--white);
+    border: 1px solid var(--secondary);
+}
+
+.shopby_buttons li:hover a {
+    color: var(--white) !important;
+}
+
+@media only screen and (max-width: 425px) {
+    .shopbybrand_container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .shopby_buttons {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .shopby_buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .shopby_buttons li {
+        flex: 0 0 calc(50% - 9px);
+        font-size: 14px;
+        list-style: none;
+        text-align: center;
+    }
 
 }
