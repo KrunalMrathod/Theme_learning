@@ -81,7 +81,10 @@
             "collection_list": [
               "normal-combination",
               "acne-oily",
-              "pigmentation-brightening"
+              "pigmentation-brightening",
+              "dry-dehydrated",
+              "anti-aging-firming",
+              "sensitive-rosacea"
             ]
           }
         },
