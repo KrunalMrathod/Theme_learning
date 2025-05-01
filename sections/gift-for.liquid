@@ -1,0 +1,88 @@
+{{ 'giftFormom.css' | asset_url | stylesheet_tag }}
+
+<div class="section-treatments">
+  <div class="page-width">
+    <div class="row">
+      <div class="col-6">
+        <div class="details-box">
+          <h2>{{ section.settings.title }}</h2>
+          <p>{{ section.settings.description }}</p>
+          <p>{{ section.settings.description2 }}</p>
+          <p>{{ section.settings.description3 }}</p>
+          <div class="pro-slider">
+            <div class="slider_btn">
+              <div><img src="{{ "arrow-prev-small-svgrepo-com.svg" | asset_url }}" width="70%" height="70%"></div>
+              <div><img src="{{ "arrow-next-svgrepo-com.svg" | asset_url }}" width="70%" height="70%"></div>
+            </div>
+            <div class="slider_container">
+              <div class="img-box">
+                <img
+                  src="https://liraclinical.com/cdn/shop/files/MothersDayKitWebsite.png?v=1745871259"
+                  width="100%"
+                  height="100%"
+                >
+              </div>
+              <div class="slider_text">
+                <h3>The Gift of Mom's Glow</h3>
+                <div class="buttons_signin_signup">
+                  <a href="#"> View more </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="main-img">
+          <img
+            src="{{ section.settings.image | image_url }}"
+            alt="{{ section.settings.title }}"
+            width="100%"
+            height="100%"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Gift for mom",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "description2",
+      "label": "Additional Description 1"
+    },
+    {
+      "type": "textarea",
+      "id": "description3",
+      "label": "Additional Description 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gift for Mom",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

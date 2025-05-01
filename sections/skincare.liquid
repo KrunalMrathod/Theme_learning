@@ -1,0 +1,65 @@
+{{ 'skincare.css' | asset_url | stylesheet_tag }}
+
+<section>
+  <div class="section-skincare">
+    <div class="skincare-content">
+      {% for block in section.blocks %}
+        <div class="skin_container">
+          <img
+            src="{{ block.settings.image | image_url}}"
+            width="100%"
+            height="auto"
+            alt="Skin Care"
+            class="skin_image"
+          >
+          <div class="image_content">
+            <h1>{{ block.settings.text }}</h1>
+
+            <a href="{{ block.settings.url }}"> {{ block.settings.button_text }} </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Skin care",
+  "class": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "url"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Skin care"
+    }
+  ]
+}
+{% endschema %}
