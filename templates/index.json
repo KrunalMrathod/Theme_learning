@@ -64,14 +64,25 @@
           "type": "collections",
           "settings": {
             "title": "Shop By Line",
-            "collection_list": []
+            "collection_list": [
+              "pro-line-brighten-anti-age",
+              "bio-line-restore-hydrate",
+              "mystiq-line-iluminate-nourish",
+              "ice-line-correct-balance",
+              "spf-line-protect-hydrate",
+              "body-line-nourish-brighten-body"
+            ]
           }
         },
         "collections_q4QWWF": {
           "type": "collections",
           "settings": {
             "title": "Skin Conditions",
-            "collection_list": []
+            "collection_list": [
+              "normal-combination",
+              "acne-oily",
+              "pigmentation-brightening"
+            ]
           }
         },
         "collections_XLmi3A": {
