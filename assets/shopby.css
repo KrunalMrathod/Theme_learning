@@ -6,18 +6,19 @@
     --white: #ffffff;
 }
 
-
-
-.shopbybrand_container {
-    width: 80%;
-    margin: 30px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.section-shop-brand {
+    padding: 60px 0 30px;
+    overflow: hidden;
 }
 
-.shopbybrand_container>h2 {
+.page-width {
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-shop-brand h2 {
     color: var(--dark-black);
     font-size: 40px;
     font-weight: 700;
@@ -26,14 +27,33 @@
     text-align: center;
 }
 
-.shopby_buttons {
+.section-shop-brand .shop-brand-tabing .tab-menu {
     display: flex;
-    gap: 20px;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-shop-brand .shop-brand-tabing .tab-menu li a:hover,
+.section-shop-brand .shop-brand-tabing .tab-menu li.active a {
+    background: var(--secondary);
+    color: var(--white);
 
 }
 
-.shopby_buttons li {
+
+.section-shop-brand .shop-brand-tabing .tab-menu li a {
     padding: 13px 19px;
     font-family: var(--font-helvetica);
     border: 1px solid #6D6E7299;
@@ -48,58 +68,114 @@
     color: var(--secondary);
     white-space: nowrap;
     text-decoration: none;
-    transition: all 0.5s ease-in-out;
+}
+
+.shop-brand-tabing .tab-main-box {
+    margin-top: 87px;
+}
+
+.shop-brand-tabing .tab-main-box .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.d-flex .product-box {
+    max-width: calc(16.66% - 17px);
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: all ease .4s;
+
+}
+
+.product-box img,
+.product-box a {
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-box a {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 12px;
+    justify-content: center;
+    position: relative;
     list-style: none;
     text-decoration: none;
-}
-
-.shopby_buttons li a {
-    text-decoration: none;
     color: var(--dark-black);
+    padding: 0px 10px;
 }
 
-.active_product_button {
-    background: var(--secondary) !important;
+
+.product-box a span {
+    font-family: var(--font-helvetica);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.4px;
+    color: var(--black);
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
-.active_product_button>a {
-    color: var(--white) !important;
+.product-box a img {
+    width: 16px;
+    height: 16px;
 }
 
-.shopby_buttons li:hover {
-    background: var(--secondary);
-    color: var(--white);
-    border: 1px solid var(--secondary);
+.product-box a:after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    background: var(--primary);
+    opacity: 0;
+    transition: all ease .4s;
 }
 
-.shopby_buttons li:hover a {
-    color: var(--white) !important;
+.product-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 215px;
+    bottom: 0;
+    left: 0;
+    background: #f6f6f6;
+    border-radius: 5px;
+    transition: all ease .4s;
 }
 
-@media only screen and (max-width: 425px) {
-    .shopbybrand_container {
-        width: 90%;
-        margin: 0 auto;
-    }
+.product-box:hover::after {
+    height: 160px;
+}
 
-    .shopby_buttons {
-        width: 100%;
-        display: flex;
-        overflow-x: auto;
-        gap: 12px;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
 
-    .shopby_buttons::-webkit-scrollbar {
+@media screen and (max-width: 425px) {
+    .tab-main-box {
         display: none;
     }
 
-    .shopby_buttons li {
-        flex: 0 0 calc(50% - 9px);
-        font-size: 14px;
-        list-style: none;
-        text-align: center;
+    .tab-menu {
+        border: 1px solid red;
     }
 
+    .section-shop-brand .shop-brand-tabing .tab-menu li a {
+        font-size: 10px;
+    }
+
+    .tab-menu li {
+        width: calc(100% - 20px);
+    }
 }
