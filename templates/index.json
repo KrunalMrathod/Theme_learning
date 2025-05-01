@@ -92,7 +92,14 @@
           "type": "collections",
           "settings": {
             "title": "Product Type",
-            "collection_list": []
+            "collection_list": [
+              "cleansers",
+              "masques",
+              "exfoliators-scrubs",
+              "cremes-moisturizers",
+              "serums",
+              "sun-protection"
+            ]
           }
         }
       },
