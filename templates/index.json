@@ -112,10 +112,22 @@
       "settings": {
         "title": "Shop By"
       }
+    },
+    "gift_for_WQHBcN": {
+      "type": "gift-for",
+      "name": "Gift for Mom",
+      "settings": {
+        "title": "The Gift of Mom's Glow",
+        "description": "Treat Mom (or yourself) with the gift of glow that says “You’re amazing!”",
+        "description2": "Celebrate the beauty of motherhood with Lira Clinical’s Gift of Mom’s Glow.",
+        "description3": "Tropical fruit enzymes in BIO Enzyme Cleanser and PRO Brightening Masque exfoliate, hydrate, and brighten all skin types while SPF EliōDrops 30 Glow gives a perfect finish to the glow.",
+        "image": "shopify://shop_images/MDBAG2.webp"
+      }
     }
   },
   "order": [
     "image_banner",
-    "shop_by_kKNm3q"
+    "shop_by_kKNm3q",
+    "gift_for_WQHBcN"
   ]
 }
