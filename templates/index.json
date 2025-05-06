@@ -171,6 +171,15 @@
             "product_ratings": 5,
             "product_link": "#"
           }
+        },
+        "product_nDbLY7": {
+          "type": "product",
+          "settings": {
+            "product_name": "SPF EliōDrops 30 Glow",
+            "product_image": "shopify://shop_images/3096PRORetinolCremecopy.webp",
+            "product_ratings": 8,
+            "product_link": "#"
+          }
         }
       },
       "block_order": [
@@ -178,7 +187,8 @@
         "product_zYmgAq",
         "product_xyfpdc",
         "product_gEE6LE",
-        "product_mHNqxp"
+        "product_mHNqxp",
+        "product_nDbLY7"
       ],
       "name": "Our Best Sellers",
       "settings": {
