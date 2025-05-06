@@ -73,10 +73,25 @@
               "body-line-nourish-brighten-body"
             ]
           }
+        },
+        "collections_VgGBxU": {
+          "type": "collections",
+          "settings": {
+            "title": "Skin Conditions",
+            "collection_list": [
+              "normal-combination",
+              "acne-oily",
+              "pigmentation-brightening",
+              "dry-dehydrated",
+              "anti-aging-firming",
+              "sensitive-rosacea"
+            ]
+          }
         }
       },
       "block_order": [
-        "collections_3KEKpX"
+        "collections_3KEKpX",
+        "collections_VgGBxU"
       ],
       "name": "Shop By Brand",
       "settings": {
