@@ -60,69 +60,32 @@
     "shop_by_Famq34": {
       "type": "ShopBy",
       "blocks": {
-        "block_RNUemJ": {
-          "type": "block",
+        "collections_3KEKpX": {
+          "type": "collections",
           "settings": {
-            "url": "#",
-            "button_text": "Shop By Line"
-          }
-        },
-        "block_c7EEGF": {
-          "type": "block",
-          "settings": {
-            "url": "#",
-            "button_text": "Skin Conditions"
-          }
-        },
-        "block_mrAib6": {
-          "type": "block",
-          "settings": {
-            "url": "#",
-            "button_text": "Product Type"
+            "title": "Shop By Line",
+            "collection_list": [
+              "pro-line-brighten-anti-age",
+              "bio-line-restore-hydrate",
+              "mystiq-line-iluminate-nourish",
+              "ice-line-correct-balance",
+              "spf-line-protect-hydrate",
+              "body-line-nourish-brighten-body"
+            ]
           }
         }
       },
       "block_order": [
-        "block_RNUemJ",
-        "block_c7EEGF",
-        "block_mrAib6"
+        "collections_3KEKpX"
       ],
       "name": "Shop By Brand",
-      "settings": {}
-    },
-    "skincare_JM4Gtc": {
-      "type": "skincare",
-      "blocks": {
-        "image_apgxGf": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/image.webp",
-            "text": "Skincare Quiz",
-            "url": "#",
-            "button_text": "Coming Soon!"
-          }
-        },
-        "image_6hjdcJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/image-2.jpg",
-            "text": "NEW BODY Line",
-            "url": "#",
-            "button_text": "Learn More"
-          }
-        }
-      },
-      "block_order": [
-        "image_apgxGf",
-        "image_6hjdcJ"
-      ],
-      "name": "Skin care",
-      "settings": {}
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
     "image_banner",
-    "shop_by_Famq34",
-    "skincare_JM4Gtc"
+    "shop_by_Famq34"
   ]
 }
