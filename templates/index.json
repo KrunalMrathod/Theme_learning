@@ -189,6 +189,15 @@
             "product_ratings": 3,
             "product_link": "#"
           }
+        },
+        "product_8gyXzY": {
+          "type": "product",
+          "settings": {
+            "product_name": "BB Brite 30",
+            "product_image": "shopify://shop_images/mystiq_iluminating_beauty_oil.webp",
+            "product_ratings": 20,
+            "product_link": "#"
+          }
         }
       },
       "block_order": [
@@ -198,7 +207,8 @@
         "product_gEE6LE",
         "product_mHNqxp",
         "product_nDbLY7",
-        "product_aYXYKg"
+        "product_aYXYKg",
+        "product_8gyXzY"
       ],
       "name": "Our Best Sellers",
       "settings": {
