@@ -180,6 +180,15 @@
             "product_ratings": 8,
             "product_link": "#"
           }
+        },
+        "product_aYXYKg": {
+          "type": "product",
+          "settings": {
+            "product_name": "SPF Solar Shield 30 Classic Tint",
+            "product_image": "shopify://shop_images/3120SolarShield30OilFreecopy_403b4cf0-755b-44e0-8a3e-012653d733e5.webp",
+            "product_ratings": 3,
+            "product_link": "#"
+          }
         }
       },
       "block_order": [
@@ -188,7 +197,8 @@
         "product_xyfpdc",
         "product_gEE6LE",
         "product_mHNqxp",
-        "product_nDbLY7"
+        "product_nDbLY7",
+        "product_aYXYKg"
       ],
       "name": "Our Best Sellers",
       "settings": {
