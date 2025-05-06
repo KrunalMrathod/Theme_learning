@@ -135,10 +135,50 @@
             "product_ratings": 5,
             "product_link": "#"
           }
+        },
+        "product_zYmgAq": {
+          "type": "product",
+          "settings": {
+            "product_name": "MYSTIQ iLuminating Cleanser",
+            "product_image": "shopify://shop_images/3706MYSTIQiLuminatingBeautyOilcopy.webp",
+            "product_ratings": 15,
+            "product_link": "#"
+          }
+        },
+        "product_xyfpdc": {
+          "type": "product",
+          "settings": {
+            "product_name": "MYSTIQ iLuminating Polisher",
+            "product_image": "shopify://shop_images/3901PRORetinal-PlusTreatmentcopy.webp",
+            "product_ratings": 14,
+            "product_link": "#"
+          }
+        },
+        "product_gEE6LE": {
+          "type": "product",
+          "settings": {
+            "product_name": "ICE Refining Masque",
+            "product_image": "shopify://shop_images/3900PROAnti-AgingPadscopy_1c6bd02e-260c-409b-aac1-65df5f257ba3.webp",
+            "product_ratings": 13,
+            "product_link": "#"
+          }
+        },
+        "product_mHNqxp": {
+          "type": "product",
+          "settings": {
+            "product_name": "ICE Balancing Lotion",
+            "product_image": "shopify://shop_images/3904PROREFININGEYECREMEcopy.webp",
+            "product_ratings": 5,
+            "product_link": "#"
+          }
         }
       },
       "block_order": [
-        "product_fUTzEK"
+        "product_fUTzEK",
+        "product_zYmgAq",
+        "product_xyfpdc",
+        "product_gEE6LE",
+        "product_mHNqxp"
       ],
       "name": "Our Best Sellers",
       "settings": {
