@@ -123,11 +123,33 @@
         "description3": "Tropical fruit enzymes in BIO Enzyme Cleanser and PRO Brightening Masque exfoliate, hydrate, and brighten all skin types while SPF EliōDrops 30 Glow gives a perfect finish to the glow.",
         "image": "shopify://shop_images/MDBAG2.webp"
       }
+    },
+    "our_best_sellers_i8N3mB": {
+      "type": "our-best-sellers",
+      "blocks": {
+        "product_fUTzEK": {
+          "type": "product",
+          "settings": {
+            "product_name": "MYSTIQ iLuminating Beauty Oil",
+            "product_image": "shopify://shop_images/3121MYSTIQiLuminatingCleansercopy_a62bbea3-b410-445c-93d4-c8d1f6d39ffb.webp",
+            "product_ratings": 5,
+            "product_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "product_fUTzEK"
+      ],
+      "name": "Our Best Sellers",
+      "settings": {
+        "title": "Best Sellers"
+      }
     }
   },
   "order": [
     "image_banner",
     "shop_by_Famq34",
-    "gift_for_bywxVd"
+    "gift_for_bywxVd",
+    "our_best_sellers_i8N3mB"
   ]
 }
