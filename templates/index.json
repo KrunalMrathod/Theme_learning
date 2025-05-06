@@ -87,11 +87,26 @@
               "sensitive-rosacea"
             ]
           }
+        },
+        "collections_ndpiMY": {
+          "type": "collections",
+          "settings": {
+            "title": "Product Type",
+            "collection_list": [
+              "cleansers",
+              "masques",
+              "exfoliators-scrubs",
+              "cremes-moisturizers",
+              "serums",
+              "sun-protection"
+            ]
+          }
         }
       },
       "block_order": [
         "collections_3KEKpX",
-        "collections_VgGBxU"
+        "collections_VgGBxU",
+        "collections_ndpiMY"
       ],
       "name": "Shop By Brand",
       "settings": {
